@@ -106,8 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8482013afe0f2345a9f91f28bb3a1b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensivity: 150
   playerBody: {fileID: 2219713723329235952}
+  mouseSensivity: 150
 --- !u!1 &7110675411671974594
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2219713723329235952}
   - component: {fileID: 9018640216885784075}
-  - component: {fileID: 8838681180771176410}
+  - component: {fileID: 5926874226570077345}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -169,7 +169,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8838681180771176410
+--- !u!114 &5926874226570077345
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,16 +178,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7110675411671974594}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 769e31663dd3bba48a4426f03a53bb6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0433895e7d815e448b8942311c643f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characterController: {fileID: 9018640216885784075}
-  _speed: 4
-  _Xspeed: 6
-  _gravity: -9.8
-  _jump: 1
   groundCheck: {fileID: 8781016138552822361}
-  groundDistance: 0.3
   groundMask:
     serializedVersion: 2
     m_Bits: 64
@@ -349,3 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3752964723759512148}
+  attackCount: 0
+  attackTypes:
+  - {fileID: 11400000, guid: 0c8b933689b32a7408e64ff7962adea8, type: 2}
+  - {fileID: 11400000, guid: 84d839f6426a0c241b9901b6f755897f, type: 2}

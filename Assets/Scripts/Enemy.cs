@@ -5,47 +5,53 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] Transform player;
+    [SerializeField] GameObject player;
     [SerializeField] GameObject projectile;
-    [SerializeField] float speed = 1f;
-    [SerializeField] float stoppingDistance;
     Animator animator;
     NavMeshAgent agent;
-    bool isDamaged = false;
-
+    public float health;
+    [SerializeField] HealthBar enemyHealthBar;
+    public float enemyCount;
+    private void Awake()
+    {
+        enemyHealthBar.SetHealth(health);
+    }
     private void Start()
     {
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
-
+        player = GameObject.Find("Player");
         InvokeRepeating(nameof(Attack), 0, 2);
     }
 
     private void Update()
     {
-        transform.LookAt(player);
+        transform.LookAt(player.transform);
 
-        agent.SetDestination(player.position);
+        agent.SetDestination(player.transform.position);
+
+        if (health <= 0)
+        {
+            Destroy(gameObject,0.5f);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Sword"))
         {
-            isDamaged = true;
-            animator.SetBool("Attack", true);
-            StartCoroutine(ResetAttack());
+            TakeDamage(25);
         }
-    }
-    IEnumerator ResetAttack()
-    {
-        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length / 2);
-        animator.SetBool("Attack", false);
     }
     void Attack()
     {
-        if (Vector3.Distance(transform.position, player.position) <= agent.stoppingDistance)
+        if (Vector3.Distance(transform.position, player.transform.position) <= agent.stoppingDistance)
         {
             Instantiate(projectile, transform.position, transform.rotation);
         }
+    }
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        enemyHealthBar.SetHealth(health);
     }
 }

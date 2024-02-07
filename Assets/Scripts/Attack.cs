@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,8 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     public Animator animator;
+    [SerializeField] int attackCount;
+    [SerializeField] List<AttackType> attackTypes;
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -13,13 +16,13 @@ public class Attack : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            animator.SetTrigger("LEFT");
+            if (attackCount == attackTypes.Count)
+            {
+                attackCount = 0;
+            }
+            animator.runtimeAnimatorController = attackTypes[attackCount].animatorOV;
+            animator.SetTrigger("Attack");
+            attackCount++;
         }
-        else if (Input.GetButtonDown("Fire2"))
-        {
-            animator.SetTrigger("RIGHT");
-
-        }
-
     }
 }
