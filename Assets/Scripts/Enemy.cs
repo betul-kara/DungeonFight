@@ -7,10 +7,13 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject player;
     [SerializeField] GameObject projectile;
+    [SerializeField] HealthBar enemyHealthBar;
+
     Animator animator;
     NavMeshAgent agent;
+
     public float health;
-    [SerializeField] HealthBar enemyHealthBar;
+    public float damage;
     public float enemyCount;
     private void Awake()
     {
@@ -30,16 +33,13 @@ public class Enemy : MonoBehaviour
 
         agent.SetDestination(player.transform.position);
 
-        if (health <= 0)
-        {
-            Destroy(gameObject,0.5f);
-        }
+
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Sword"))
         {
-            TakeDamage(25);
+            TakeDamage(damage);
         }
     }
     void Attack()
@@ -53,5 +53,10 @@ public class Enemy : MonoBehaviour
     {
         health -= damage;
         enemyHealthBar.SetHealth(health);
+
+        if (health <= 0)
+        {
+            Destroy(gameObject, 0.5f);
+        }
     }
 }

@@ -5460,8 +5460,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   projectile: {fileID: 2829017207265751787, guid: 36ed25562621eb441b3e602a6e5a393b, type: 3}
-  health: 100
   enemyHealthBar: {fileID: 913382939753997291}
+  health: 100
+  damage: 25
+  enemyCount: 0
 --- !u!1 &5600763612839015502
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,8 +7,16 @@ public class Player : MonoBehaviour
     [SerializeField] CharacterController characterController;
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundMask;
+    [SerializeField] HealthBar playerHealthBar;
+    [SerializeField] GameObject startingPoint;
+    [SerializeField] GameObject gameOverPanel;
 
     public static Player Instance;
+    public float health;
+    public float damage;
+    public bool isSpawned = false;
+
+
     float _speed = 4f;
     float _Xspeed = 6f;
     float _gravity = -9.8f;
@@ -17,11 +25,6 @@ public class Player : MonoBehaviour
     Vector3 _velocity;
     bool isGrounded;
 
-    public float health;
-    [SerializeField] HealthBar playerHealthBar;
-    [SerializeField] GameObject startingPoint;
-    [SerializeField] GameObject gameOverPanel;
-    public bool isSpawned = false;
     private void Awake()
     {
         playerHealthBar.SetHealth(health);
@@ -30,12 +33,6 @@ public class Player : MonoBehaviour
     void Update()
     {
         Movement();
-        if (health <= 0 && gameOverPanel.active == false)
-        {
-            gameOverPanel.SetActive(true);
-            Time.timeScale = 0f;
-            Cursor.lockState = CursorLockMode.None;
-        }
     }
 
     private void Movement()
@@ -71,7 +68,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Projectile"))
         {
-            TakeDamage(10);
+            TakeDamage(damage);
         }
         if (other.gameObject.CompareTag("StartingPoint"))
         {
@@ -83,5 +80,12 @@ public class Player : MonoBehaviour
     {
         health -= damage;
         playerHealthBar.SetHealth(health);
+
+        if (health <= 0 && gameOverPanel.active == false)
+        {
+            gameOverPanel.SetActive(true);
+            Time.timeScale = 0f;
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }

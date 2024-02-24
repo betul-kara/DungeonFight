@@ -37,5 +37,4 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
         Cursor.lockState = CursorLockMode.None;
     }
-
 }
