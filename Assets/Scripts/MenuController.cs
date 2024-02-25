@@ -8,7 +8,7 @@ public class MenuController : MonoBehaviour
     [SerializeField] GameObject pausePanel;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && pausePanel.active == false)
+        if (Input.GetKeyDown(KeyCode.Escape) && pausePanel.activeSelf == false)
         {
             pausePanel.SetActive(true);
             Setting(CursorLockMode.None, 0);

@@ -14,6 +14,7 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
+        mouseSensivity = PlayerPrefs.GetInt("MouseSensitivity");
         float MouseX = Input.GetAxis("Mouse X") * mouseSensivity * Time.deltaTime;
         float MouseY = Input.GetAxis("Mouse Y") * mouseSensivity * Time.deltaTime;
 

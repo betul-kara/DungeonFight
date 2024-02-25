@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
         health -= damage;
         playerHealthBar.SetHealth(health);
 
-        if (health <= 0 && gameOverPanel.active == false)
+        if (health <= 0 && gameOverPanel.activeSelf == false)
         {
             gameOverPanel.SetActive(true);
             Time.timeScale = 0f;
