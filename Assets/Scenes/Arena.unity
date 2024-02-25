@@ -13266,6 +13266,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FightArena
       objectReference: {fileID: 0}
+    - target: {fileID: 4060874731628633402, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4060874731628633402, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.23
+      objectReference: {fileID: 0}
     - target: {fileID: 6131489362419074847, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
       propertyPath: m_Name
       value: SlidingDoor
