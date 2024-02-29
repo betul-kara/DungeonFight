@@ -4245,6 +4245,10 @@ PrefabInstance:
       propertyPath: playerHealthBar
       value: 
       objectReference: {fileID: 1080219686}
+    - target: {fileID: 5926874226570077345, guid: b8ee94b244e82b4429914b8a6aa54e75, type: 3}
+      propertyPath: groundMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 6831870053400800405, guid: b8ee94b244e82b4429914b8a6aa54e75, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -4256,6 +4260,10 @@ PrefabInstance:
     - target: {fileID: 7110675411671974594, guid: b8ee94b244e82b4429914b8a6aa54e75, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8781016138552822361, guid: b8ee94b244e82b4429914b8a6aa54e75, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 9018640216885784075, guid: b8ee94b244e82b4429914b8a6aa54e75, type: 3}
       propertyPath: m_Height
@@ -4348,6 +4356,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -6.3
       objectReference: {fileID: 0}
+    - target: {fileID: 426239503985844390, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.39
+      objectReference: {fileID: 0}
     - target: {fileID: 426239503986277510, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
       propertyPath: m_Name
       value: wall_Sword
@@ -4355,10 +4367,6 @@ PrefabInstance:
     - target: {fileID: 426239503986277510, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 426239503985844390, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 601394006474191337, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
       propertyPath: m_Layer
@@ -4383,18 +4391,6 @@ PrefabInstance:
     - target: {fileID: 1500063353964450655, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2260314580728689125, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305028720359193061, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2602094943714779367, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
-      propertyPath: m_Intensity
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1534355557377537912, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
       propertyPath: m_Layer
@@ -4428,6 +4424,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2260314580728689125, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305028720359193061, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2379011740036869752, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -4444,9 +4448,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2602094943714779367, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2712928439421259377, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
       propertyPath: m_Name
       value: FightArena
+      objectReference: {fileID: 0}
+    - target: {fileID: 3070592003260784076, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4060874731628633402, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4460,10 +4472,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlidingDoor
       objectReference: {fileID: 0}
-    - target: {fileID: 7084113470471998294, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.4
-      objectReference: {fileID: 0}
     - target: {fileID: 6426851759510059383, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -4471,6 +4479,10 @@ PrefabInstance:
     - target: {fileID: 6867056502841599122, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084113470471998294, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 7110003351089415063, guid: 880b1d0e34863234b8462e6fe9182c02, type: 3}
       propertyPath: m_Layer
