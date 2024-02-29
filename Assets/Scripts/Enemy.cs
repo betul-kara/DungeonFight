@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
-        player = GameObject.Find("Player");
+        player = GameObject.Find("TargetPoint");
         InvokeRepeating(nameof(Attack), 0, 2);
     }
 
