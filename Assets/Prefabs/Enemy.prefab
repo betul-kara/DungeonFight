@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3678857062717865426}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 5959480196546806514}
   - component: {fileID: 2880261432487014950}
   - component: {fileID: 5151095960077674036}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 2300949006580129154}
   - component: {fileID: 2342494140145472778}
   - component: {fileID: 913382939753997291}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 7347412894586744460}
   - component: {fileID: 8894974174288489865}
   - component: {fileID: 1701606455469936063}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4935,7 +4935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 862904152561209985}
   - component: {fileID: 8840671969993077537}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5030,7 +5030,7 @@ GameObject:
   - component: {fileID: 5858036036317874666}
   - component: {fileID: 3235350482115695544}
   - component: {fileID: 4378966978121047151}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5105,7 +5105,7 @@ GameObject:
   - component: {fileID: 6238595478453680450}
   - component: {fileID: 7118747865048411002}
   - component: {fileID: 2634967500630325698}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: sword_sword_sword_Metal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5188,7 +5188,7 @@ GameObject:
   - component: {fileID: 7095319638919885116}
   - component: {fileID: 4762019548491907233}
   - component: {fileID: 5649671478847096679}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: sword_sword_sword_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5272,11 +5272,11 @@ GameObject:
   - component: {fileID: 9041000729045408361}
   - component: {fileID: 7120547695886701850}
   - component: {fileID: 1043242086255926098}
-  - component: {fileID: 477127063722358789}
+  - component: {fileID: -7256672609237060209}
   - component: {fileID: 430893628108772254}
   - component: {fileID: 4161889741351252678}
   - component: {fileID: 1767431801271432886}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5293,7 +5293,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11, y: 1.2, z: 6.21}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1100835456713377243}
@@ -5376,7 +5376,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &477127063722358789
+--- !u!54 &-7256672609237060209
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5384,7 +5384,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5220485048406312539}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -5401,8 +5401,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 14
+  m_CollisionDetection: 1
 --- !u!95 &430893628108772254
 Animator:
   serializedVersion: 5
@@ -5475,7 +5475,7 @@ GameObject:
   - component: {fileID: 1985199007175982943}
   - component: {fileID: 2149091301171338582}
   - component: {fileID: 1260220840679814426}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5548,7 +5548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1100835456713377243}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5584,7 +5584,7 @@ GameObject:
   - component: {fileID: 1029371157599181994}
   - component: {fileID: 5045080678695905289}
   - component: {fileID: 8226085202825490443}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5688,7 +5688,7 @@ GameObject:
   - component: {fileID: 398557567981588396}
   - component: {fileID: 1485208773944168341}
   - component: {fileID: 8551900151829199350}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5771,7 +5771,7 @@ GameObject:
   - component: {fileID: 1355105325052153310}
   - component: {fileID: 2259379814044174333}
   - component: {fileID: 4363020316132094510}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sword Obj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5849,7 +5849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1018501351821124737}
   - component: {fileID: 2840157311061362073}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: EnemyHealthSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5950,7 +5950,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8234094559010283863}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
