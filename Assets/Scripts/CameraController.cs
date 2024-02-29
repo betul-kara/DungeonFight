@@ -8,14 +8,16 @@ public class CameraController : MonoBehaviour
     public Transform playerBody;
     public float mouseSensivity = 100f;
     float xRotation = 0f;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        PlayerPrefs.SetFloat("MouseSensitivity", mouseSensivity);
+        mouseSensivity = PlayerPrefs.GetFloat("MouseSensitivity");
     }
 
     void Update()
     {
-        mouseSensivity = PlayerPrefs.GetInt("MouseSensitivity");
         float MouseX = Input.GetAxis("Mouse X") * mouseSensivity * Time.deltaTime;
         float MouseY = Input.GetAxis("Mouse Y") * mouseSensivity * Time.deltaTime;
 

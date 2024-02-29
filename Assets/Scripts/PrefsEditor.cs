@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEditor;
 
+#if (UNITY_EDITOR)
 public class PrefsEditor : EditorWindow
 {
-    private int _mouseSensitivity;
+    private float _mouseSensitivity;
 
     [MenuItem("Window/Prefs Editor")]
     public static void ShowWindow()
@@ -15,8 +16,9 @@ public class PrefsEditor : EditorWindow
     {
         GUILayout.Space(10);
 
-        _mouseSensitivity = EditorGUILayout.IntField("Mouse Sensitivity", PlayerPrefs.GetInt("MouseSensitivity"));
-        PlayerPrefs.SetInt("MouseSensitivity", _mouseSensitivity);
+        _mouseSensitivity = EditorGUILayout.FloatField("Mouse Sensitivity", PlayerPrefs.GetFloat("MouseSensitivity"));
+        PlayerPrefs.SetFloat("MouseSensitivity", _mouseSensitivity);
 
     }
 }
+#endif
