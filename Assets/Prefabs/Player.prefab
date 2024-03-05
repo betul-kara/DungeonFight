@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 5926874226570077345}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -327,7 +327,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   playerHealthBar: {fileID: 0}
-  startingPoint: {fileID: 0}
   gameOverPanel: {fileID: 0}
   health: 100
   damage: 10

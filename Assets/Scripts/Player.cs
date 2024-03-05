@@ -8,14 +8,12 @@ public class Player : MonoBehaviour
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask groundMask;
     [SerializeField] HealthBar playerHealthBar;
-    [SerializeField] GameObject startingPoint;
     [SerializeField] GameObject gameOverPanel;
 
     public static Player Instance;
     public float health;
     public float damage;
     public bool isSpawned = false;
-
 
     float _speed = 4f;
     float _Xspeed = 6f;
@@ -69,11 +67,6 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("Projectile"))
         {
             TakeDamage(damage);
-        }
-        if (other.gameObject.CompareTag("StartingPoint"))
-        {
-            isSpawned = true;
-            startingPoint.SetActive(false);
         }
     }
     public void TakeDamage(float damage)

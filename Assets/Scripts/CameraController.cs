@@ -12,8 +12,7 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        PlayerPrefs.SetFloat("MouseSensitivity", mouseSensivity);
-        mouseSensivity = PlayerPrefs.GetFloat("MouseSensitivity");
+        mouseSensivity = PlayerPrefs.GetFloat("MouseSensitivity", 150f);
     }
 
     void Update()

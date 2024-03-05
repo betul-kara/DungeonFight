@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timeText;
     [SerializeField] GameObject winText;
+
+    
+    public static int level = 1;
+
     float totalTime = 20f;
     float time = 0;
+
     private void Start()
     {
         time = totalTime;
@@ -34,7 +38,9 @@ public class GameManager : MonoBehaviour
         winText.SetActive(true);
         yield return new WaitForSeconds(2);
         winText.SetActive(false);
-        SceneManager.LoadScene(0);
+
+        time = totalTime;
+        Player.Instance.isSpawned = false;
         Cursor.lockState = CursorLockMode.None;
     }
 }
