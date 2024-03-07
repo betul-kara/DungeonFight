@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
     [SerializeField] GameObject pausePanel;
+    [SerializeField] TMP_Dropdown qualityDropdown;
+    string[] qualityLevels;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && pausePanel.activeSelf == false)
@@ -13,6 +16,7 @@ public class MenuController : MonoBehaviour
             pausePanel.SetActive(true);
             Setting(CursorLockMode.None, 0);
         }
+        SetupQuality();
     }
     public void Continue()
     {
@@ -32,5 +36,19 @@ public class MenuController : MonoBehaviour
     public void ExitButton()
     {
         Application.Quit();
+    }
+    private void SetupQuality()
+    {
+        qualityLevels = QualitySettings.names;
+        qualityDropdown.ClearOptions();
+        qualityDropdown.AddOptions(new List<string>(qualityLevels));
+
+        int currentQualityIndex = QualitySettings.GetQualityLevel();
+        qualityDropdown.value = currentQualityIndex;
+        qualityDropdown.RefreshShownValue();
+    }
+    public void SetQuality(int index)
+    {
+        QualitySettings.SetQualityLevel(index, false);
     }
 }

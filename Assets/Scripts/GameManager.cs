@@ -44,3 +44,5 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 }
+
+// 4.5 ya da 4.6 yükseliyor
