@@ -35,13 +35,13 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator Win()
     {
-        winText.SetActive(true);
-        yield return new WaitForSeconds(2);
-        winText.SetActive(false);
-
         time = totalTime;
         Player.Instance.isSpawned = false;
         Cursor.lockState = CursorLockMode.None;
+
+        winText.SetActive(true);
+        yield return new WaitForSeconds(2);
+        winText.SetActive(false);
     }
 }
 
