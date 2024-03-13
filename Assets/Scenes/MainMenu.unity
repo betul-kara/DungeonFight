@@ -40578,28 +40578,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8354857757416658632}
   m_Mesh: {fileID: 2348616061427368171, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
---- !u!195 &4161889741135507552
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5220485050332808445}
-  m_Enabled: 0
-  m_AgentTypeID: 0
-  m_Radius: 0.49999997
-  m_Speed: 4
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 4
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1.9999999
-  m_BaseOffset: 0.99999994
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!4 &4215139191344125615
 Transform:
   m_ObjectHideFlags: 0
@@ -56627,7 +56605,6 @@ GameObject:
   - component: {fileID: 7120547696206780348}
   - component: {fileID: 477127062965549731}
   - component: {fileID: 1043242084865776116}
-  - component: {fileID: 4161889741135507552}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
