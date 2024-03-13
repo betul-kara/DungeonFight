@@ -11,8 +11,8 @@ public class LevelTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Cursor.lockState = CursorLockMode.Locked;
+            LevelManager.Instance.level = level;
             Player.Instance.isSpawned = true;
-            GameManager.level = level;
             gameObject.SetActive(false);
         }
     }

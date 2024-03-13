@@ -8,9 +8,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI timeText;
     [SerializeField] GameObject winText;
 
-    
-    public static int level = 1;
-
     float totalTime = 20f;
     float time = 0;
 
@@ -37,7 +34,6 @@ public class GameManager : MonoBehaviour
     {
         time = totalTime;
         Player.Instance.isSpawned = false;
-        Cursor.lockState = CursorLockMode.None;
 
         winText.SetActive(true);
         yield return new WaitForSeconds(2);
