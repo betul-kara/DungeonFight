@@ -6,7 +6,7 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance { get; private set; }
 
-    [SerializeField] private Animator[] doorAnimators;
+    [SerializeField] private Animator[] wallAnimators;
     [HideInInspector] public int level = 0;
 
     private void Awake()
@@ -14,9 +14,14 @@ public class LevelManager : MonoBehaviour
         Instance = this;
     }
 
-    public void OpenNewLevelDoor()
+    public void OpenNewLevel()
     {
-        doorAnimators[level].SetTrigger("Close");
-        doorAnimators[level + 1].SetTrigger("Open");
+        wallAnimators[level].SetTrigger("Close");
+        wallAnimators[level + 1].SetTrigger("Open");
+    }
+
+    public void RestartLevel()
+    {
+        print("restarting level...");
     }
 }

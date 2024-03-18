@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI timeText;
-    [SerializeField] GameObject winText;
+    [SerializeField] GameObject winPanel;
 
     float totalTime = 20f;
     float time = 0;
@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     {
         time = totalTime;
     }
+
     private void Update()
     {
         if (Player.Instance.isSpawned)
@@ -27,17 +28,16 @@ public class GameManager : MonoBehaviour
         }
         if (time <= 0)
         {
-            StartCoroutine(Win());
+            Win();
         }
     }
-    IEnumerator Win()
+
+    private void Win()
     {
         time = totalTime;
+        winPanel.SetActive(true);
         Player.Instance.isSpawned = false;
-
-        winText.SetActive(true);
-        yield return new WaitForSeconds(2);
-        winText.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
 
