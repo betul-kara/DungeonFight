@@ -8,7 +8,15 @@ public class HealthBar : MonoBehaviour
 
     public void SetHealth(float health)
     {
-        slider.value = health;
-        text.text = health.ToString();
+        if (slider.value > 0)
+        {
+            slider.value = health;
+            text.text = health.ToString();
+        }
+        else
+        {
+            slider.value = 0;
+            text.text = "0";
+        }
     }
 }
