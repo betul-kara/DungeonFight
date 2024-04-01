@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         time = totalTime;
         winPanel.SetActive(true);
         Player.Instance.isSpawned = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.None;
     }
 }
 

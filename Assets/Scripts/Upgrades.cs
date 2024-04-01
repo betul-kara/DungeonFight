@@ -17,20 +17,24 @@ public class Upgrades : MonoBehaviour
     public void UpgradeHealth()
     {
         Player.Instance.health += 20;
-        SetButtonAttributes(false, disableColor);
-        buttons[0].GetComponent<Animator>().SetTrigger("Purchased");
     }
 
     public void UpgradeAttack()
     {
-        SetButtonAttributes(false, disableColor);
-        buttons[1].GetComponent<Animator>().SetTrigger("Purchased");
     }
 
     public void UpgradeShield()
     {
+    }
+
+    public void SetButtonAttributesToDisable()
+    {
         SetButtonAttributes(false, disableColor);
-        buttons[2].GetComponent<Animator>().SetTrigger("Purchased");
+    }
+
+    public void PurchasedTrigger(Animator animator)
+    {
+        animator.SetTrigger("Purchased");
     }
 
     private void SetButtonAttributes(bool isInteractable, Color color)
@@ -39,6 +43,7 @@ public class Upgrades : MonoBehaviour
         {
             button.interactable = isInteractable;
             button.GetComponent<Image>().color = color;
+            button.GetComponent<Animator>().SetTrigger("Normal");
         }
     }
 }
