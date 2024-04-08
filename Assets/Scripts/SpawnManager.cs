@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    [SerializeField] GameObject enemyPrefab;
+    [SerializeField] List<GameObject> enemyPrefabs;
     [SerializeField] float spawnInterval;
     [SerializeField] List<BoxCollider> spawnAreas;
 
@@ -24,7 +24,7 @@ public class SpawnManager : MonoBehaviour
             float random_z = Random.Range(spawnArea.bounds.min.z, spawnArea.bounds.max.z);
 
             Vector3 spawnPoint = new(random_x, random_y, random_z);
-            Instantiate(enemyPrefab, spawnPoint, Quaternion.identity);
+            Instantiate(enemyPrefabs[Random.Range(0, enemyPrefabs.Count)], spawnPoint, Quaternion.identity);
         }
     }
 }
