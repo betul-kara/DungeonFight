@@ -30,11 +30,9 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         transform.LookAt(player.transform);
-
         agent.SetDestination(player.transform.position);
-
-
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Sword"))
@@ -56,7 +54,7 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject, 0.5f);
+            Destroy(gameObject);
         }
     }
 }

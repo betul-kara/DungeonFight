@@ -33,6 +33,11 @@ public class GameManager : MonoBehaviour
                 Win();
             }
         }
+
+        if (Input.GetMouseButtonUp(1))
+        {
+            Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
+        }
     }
 
     private void Win()
@@ -40,8 +45,5 @@ public class GameManager : MonoBehaviour
         time = totalTime;
         winPanels[LevelManager.Level].SetActive(true);
         Player.Instance.isSpawned = false;
-        Cursor.lockState = CursorLockMode.None;
     }
 }
-
-// 4.5 ya da 4.6 yükseliyor
