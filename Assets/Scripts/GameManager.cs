@@ -18,6 +18,16 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetMouseButtonUp(1))
+        {
+            Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
+        }
+
+        CheckTime();
+    }
+
+    private void CheckTime()
+    {
         if (Player.Instance.isSpawned)
         {
             if (time > 0)
@@ -32,11 +42,6 @@ public class GameManager : MonoBehaviour
             {
                 Win();
             }
-        }
-
-        if (Input.GetMouseButtonUp(1))
-        {
-            Cursor.lockState = Cursor.lockState == CursorLockMode.Locked ? CursorLockMode.None : CursorLockMode.Locked;
         }
     }
 
