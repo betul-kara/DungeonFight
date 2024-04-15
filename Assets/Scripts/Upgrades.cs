@@ -16,15 +16,19 @@ public class Upgrades : MonoBehaviour
 
     public void UpgradeHealth()
     {
-        Player.Instance.health += 20;
+        Player.Instance.maxHealth += 20;
+        Player.Instance.UpdatePlayerHealthBar();
     }
 
     public void UpgradeAttack()
     {
+        float currentEnemyDamage = PlayerPrefs.GetFloat("EnemyDamage", 20f);
+        PlayerPrefs.SetFloat("EnemyDamage", currentEnemyDamage + 10);
     }
 
-    public void UpgradeShield()
+    public void ReduceEnemySpawnTime()
     {
+        SpawnManager.spawnInterval += 2f;
     }
 
     public void SetButtonAttributesToDisable()

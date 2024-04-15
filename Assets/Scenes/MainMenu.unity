@@ -310,7 +310,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DUNGEON FIGHT
+  m_text: DUNGEON KNIGHT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 66dddca405523a44c87b814474c1e751, type: 2}
   m_sharedMaterial: {fileID: -135879762989066223, guid: 66dddca405523a44c87b814474c1e751, type: 2}

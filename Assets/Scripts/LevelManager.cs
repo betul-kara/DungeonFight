@@ -16,6 +16,6 @@ public class LevelManager : MonoBehaviour
 
     public void RestartLevel()
     {
-        print("restarting level...");
+        Player.Instance.isSpawned = true;
     }
 }

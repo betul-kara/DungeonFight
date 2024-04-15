@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject gameOverPanel;
 
     public static Player Instance;
+    public float maxHealth = 100f;
     public float health;
     public float damage;
     public bool isSpawned = false;
@@ -25,12 +26,19 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        health = maxHealth;
         playerHealthBar.SetHealth(health);
         Instance = this;
     }
     void Update()
     {
         Movement();
+    }
+
+    public void UpdatePlayerHealthBar()
+    {
+        health = maxHealth;
+        playerHealthBar.SetHealth(health);
     }
 
     private void Movement()

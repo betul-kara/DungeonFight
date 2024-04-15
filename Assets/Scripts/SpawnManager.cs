@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    [SerializeField] float spawnInterval;
+    public static float spawnInterval = 5f;
     [SerializeField] BoxCollider[] spawnAreas;
     [SerializeField] GameObject[] enemyPrefabs;
 

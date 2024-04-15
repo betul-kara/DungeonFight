@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("TargetPoint");
+        damage = PlayerPrefs.GetFloat("EnemyDamage", 20f);
         InvokeRepeating(nameof(Attack), 0, 2);
     }
 
